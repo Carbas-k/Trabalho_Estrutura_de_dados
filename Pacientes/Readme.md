@@ -8,27 +8,44 @@ O Simulador de Sistema de Gerenciamento de Dados de Paciente é um projeto acad�
 
 _**Estrutura do repositório:**_
 
-📂**Trabalho_Estrutura_de_Dados**
+📂 Trabalho_Estrutura_de_Dados 
+**── 📂 PACIENTES**       # Gerenciamento de dados dos pacientes
 
-── 📂 PACIENTES         # Gerenciamento de dados dos pacientes  
+**────📜 Makefile**         # Arquivo para compilação automática do projeto
 
-────📜 Makefile          # Arquivo para compilação automática do projeto  
+**──── 📜 README.md**         # Documentação do projeto
 
-──── 📜 README.md         # Documentação do projeto  
+**──── 📜 arquivo.c** #responsável por carregar e salvar dados de pacientes em um arquivo CSV usando uma lista encadeada.
 
-──── 📜 bd_pacientes.csv  # Arquivo de dados dos pacientes utilizado pelo programa  
+**──── 📜 arquivo.h**   #declara as funções responsáveis por carregar e salvar dados em um arquivo CSV usando uma lista encadeada
 
-──── 📜 main.c            # Arquivo principal do programa
+**──── 📜 bd_paciente.c**            # Arquivo implementa um banco de dados de pacientes em C utilizando uma lista encadeada
 
-──── 📜 bd_paciente.c            # Arquivo implementa um banco de dados de pacientes em C utilizando uma lista encadeada
+**──── 📜 bd_pacientes.csv**  # Arquivo de dados dos pacientes utilizado pelo programa  
 
-──── 📜 bd_paciente.h           # Arquivo de cabeçalho para a implementação do banco de dados de pacientes.
+**──── 📜 bd_paciente.h**           # Arquivo de cabeçalho para a implementação do banco de dados de pacientes.
 
-── 📜ESPECIFICAÇÃO     # Documentação técnica e requisitos do projeto
+**──── 📜 lista.c** #Arquivo que contém a implementação das funções que manipulam uma lista encadeada para armazenar e gerenciar dados de pacientes.
+
+**──── 📜 lista.h** #header file que define as estruturas e funções para manipular uma lista encadeada de pacientes
+
+**──── 📜 main.c**            # Arquivo principal do programa
+
+**──── 📜 menu.c** #O arquivo de código que você enviou implementa um sistema de gerenciamento de pacientes baseado em uma lista encadeada. 
+
+**──── 📜 menu.h** #Arquivo de cabeçalho em C chamado menu.h.
+
+**──── 📜 validacao.c** #Esse arquivo implementa funções de validação e formatação para de dados.
+
+**──── 📜 validacao.h** #Esse arquivo validacao.h é um header file em C, que contém declarações de funções utilizadas para validação e formatação de dados. 
+
+**─📜ESPECIFICAÇÃO**     # Documentação técnica e requisitos do projeto 
 
 
 
-_** Decisões de Implementação:**_
+
+
+_**Decisões de Implementação:**_
 
 **Estrutura do Banco de Dados -** A escolha de armazenar os dados dos pacientes em colunas que contém: ID,CPF, Nome, Idade e Data de Cadastro se dá pela necessidade de registro de informações básicas do paciente.
 
