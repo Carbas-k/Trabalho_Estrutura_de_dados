@@ -56,7 +56,12 @@ _**Decisões de Implementação:**_
 **Escopo Temporal -** A coluna de registro Data de cadastro vai permitir que análises temporais sejam feitas, para que os usuários possam achar os registros e atualizá-los de maneira mais eficiente.
 
 _**Módulos do programa:**_
-  
+
+| Funções     | Descrição| Parâmetros   |  Retorno  |
+|------------|:--------:|-------------:|----------:|
+| f_carregarDados  |  Carrega os arquivos e abre para leitura    | LinkedList *lista e const char *nome_arquivo|        Void   |
+| f_salvarDados     |  Salva os dados de uma lista encadeada em um arquivo CSV   | LinkedList *lista e const char *nome_arquivo    |     Void      |
+
 
 
 
