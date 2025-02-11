@@ -122,7 +122,11 @@ _**Funções do programa:**_
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Decisões de Implementação:**
-Estrutura do Banco de Dados - A escolha de armazenar os dados dos pacientes em colunas que contém: ID,CPF, Nome, Idade e Data de Cadastro se dá pela necessidade de registro de informações básicas do paciente.
-Formato dos dados - A escolha do formato do CPF e da Data por conter pontos e traços (ex.:123.456.789.01 e YYY-MM-DD) possui sua motivação na usabilidade e melhoria do entendimento para o usuário do sistema, uma vez que humanos possuem maior afinidade com esse modelo e costumam registar e passar seus dados dessa maneira.
-Validação dos dados - A verificação contida no CPF tem o intuito de mitigar possíveis erros de digitação. Já a verificação na data permite que apenas pacientes com idades reais, portanto de valores maiores que 0 sejam registrados.
-Escopo Temporal - A coluna de registro Data de cadastro vai permitir que análises temporais sejam feitas, para que os usuários possam achar os registros e atualizá-los de maneira mais eficiente.
+
+_Estrutura do Banco de Dados -_ A escolha de armazenar os dados dos pacientes em colunas que contém: ID,CPF, Nome, Idade e Data de Cadastro se dá pela necessidade de registro de informações básicas do paciente.
+
+_Formato dos dados -_ A escolha do formato do CPF e da Data por conter pontos e traços (ex.:123.456.789.01 e YYY-MM-DD) possui sua motivação na usabilidade e melhoria do entendimento para o usuário do sistema, uma vez que humanos possuem maior afinidade com esse modelo e costumam registar e passar seus dados dessa maneira.
+
+_Validação dos dados -_ A verificação contida no CPF tem o intuito de mitigar possíveis erros de digitação. Já a verificação na data permite que apenas pacientes com idades reais, portanto de valores maiores que 0 sejam registrados.
+
+_Escopo Temporal -_ A coluna de registro Data de cadastro vai permitir que análises temporais sejam feitas, para que os usuários possam achar os registros e atualizá-los de maneira mais eficiente.
