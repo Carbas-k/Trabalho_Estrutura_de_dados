@@ -89,7 +89,7 @@ _**Funções do programa:**_
 | `liberar_bdpaciente`        | Libera a memória alocada para o banco de dados e seus nós.                                        | `BDPaciente *bd`: Ponteiro para o banco de dados.                                                          | Nenhum (void).                                                             |
 |                             | - Percorre todos os nós da lista encadeada.<br>- Libera cada nó individualmente.<br>- Libera a estrutura principal do BD. |                                                                                                            |                                                                             |
 
-| **Funções.c**                     | **Descrição**                                                                                     | **Parâmetros**                                                                                             | **Retorno**                                                                 |
+| **Funções menu.c**                     | **Descrição**                                                                                     | **Parâmetros**                                                                                             | **Retorno**                                                                 |
 |---------------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | `f_exibirMenu`                  | Exibe o menu principal e processa as opções do usuário.                                           | `BDPaciente *bd`: Ponteiro para o banco de dados.                                                          | Nenhum (void).                                                             |
 |                                 | - Exibe um menu com opções para consultar, atualizar, remover, inserir e listar pacientes.<br>- Processa a entrada do usuário até que escolha sair. |                                                                                                            |                                                                             |
@@ -104,6 +104,14 @@ _**Funções do programa:**_
 | `f_imprimirLista`               | Imprime todos os pacientes cadastrados.                                                           | `BDPaciente *bd`: Ponteiro para o banco de dados.                                                          | Nenhum (void).                                                             |
 |                                 | - Verifica se a lista está vazia.<br>- Exibe os dados dos pacientes em formato tabular.           |                                                                                                            |                                                                             |
 
+| **Função de validacao.c**               | **Descrição**                                                                                     | **Parâmetros**                                                                                             | **Retorno**                                                                 |
+|--------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| `validar_cpf`            | Valida um CPF numérico.                                                                           | `const char *cpf`: String contendo o CPF a ser validado (apenas números).                                  | `int`: Retorna `1` se o CPF for válido, ou `0` se inválido.                 |
+|                          | - Verifica se o CPF tem exatamente 11 caracteres.<br>- Verifica se todos os caracteres são dígitos. |                                                                                                            |                                                                             |
+| `validar_data`           | Valida uma data no formato `AAAA-MM-DD`.                                                          | `const char *data`: String contendo a data a ser validada.                                                 | `int`: Retorna `1` se a data for válida, ou `0` se inválida.                |
+|                          | - Verifica se a data tem exatamente 10 caracteres.<br>- Verifica os separadores `-`.<br>- Valida o ano, mês e dia.<br>- Considera anos bissextos e meses com 30/31 dias. |                                                                                                            |                                                                             |
+| `formatar_cpf`           | Formata um CPF numérico para o formato `xxx.xxx.xxx-xx`.                                          | `const char *cpf_numerico`: String contendo o CPF numérico (apenas números).<br>`char *cpf_formatado`: String onde o CPF formatado será armazenado. | Nenhum (void).                                                             |
+|                          | - Verifica se o CPF tem exatamente 11 dígitos.<br>- Formata o CPF no padrão `xxx.xxx.xxx-xx`.<br>- Retorna "CPF_INVALIDO" se o CPF não tiver 11 dígitos. |                                                                                                            |                                                                             |
 
 
 
@@ -111,8 +119,7 @@ _**Funções do programa:**_
 
 
 
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Decisões de Implementação:**
 Estrutura do Banco de Dados - A escolha de armazenar os dados dos pacientes em colunas que contém: ID,CPF, Nome, Idade e Data de Cadastro se dá pela necessidade de registro de informações básicas do paciente.
