@@ -55,12 +55,27 @@ _**Decisões de Implementação:**_
 
 **Escopo Temporal -** A coluna de registro Data de cadastro vai permitir que análises temporais sejam feitas, para que os usuários possam achar os registros e atualizá-los de maneira mais eficiente.
 
-_**Módulos do programa:**_
+_**Funções do programa:**_
 
-| Funções     | Descrição| Parâmetros   |  Retorno  |
+| Funções em arquivo.c     | Descrição| Parâmetros   |  Retorno  |
 |------------|:--------:|-------------:|----------:|
 | f_carregarDados  |  Carrega os arquivos e abre para leitura    | LinkedList *lista e const char *nome_arquivo|        Void   |
 | f_salvarDados     |  Salva os dados de uma lista encadeada em um arquivo CSV   | LinkedList *lista e const char *nome_arquivo    |     Void      |
+
+
+| Função                     | Descrição                                                                                     | Parâmetros                                                                                             | Retorno                                                                 |
+|----------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| `criar_bdpaciente`         | Cria e inicializa o banco de dados (BD) de pacientes.                                           | Nenhum                                                                                                 | Ponteiro para `BDPaciente`                                              |
+| `liberar_bdpaciente`       | Libera a memória alocada para o banco de dados e seus nós.                                      | `BDPaciente *bd`: Ponteiro para o banco de dados.                                                      | void                                                                    |
+| `carregar_dados_csv`       | Carrega os dados de um arquivo CSV para o banco de dados.                                       | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`const char *nome_arquivo`: Nome do arquivo CSV.  | void                                                                    |
+| `salvar_dados_csv`         | Salva os dados do banco de dados em um arquivo CSV.                                             | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`const char *nome_arquivo`: Nome do arquivo CSV.  | void                                                                    |
+| `consultar_paciente`       | Consulta um paciente pelo CPF ou nome.                                                          | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`const char *consulta`: String contendo CPF ou nome. | Ponteiro para o `Paciente` encontrado ou `NULL`                         |
+| `consultar_paciente_por_cpf`| Consulta um paciente exclusivamente pelo CPF.                                                  | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`const char *cpf`: CPF do paciente.               | Ponteiro para o `Paciente` encontrado ou `NULL`                         |
+| `inserir_paciente`         | Insere um novo paciente no banco de dados.                                                      | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`const char *cpf`: CPF do paciente.<br>`const char *nome`: Nome do paciente.<br>`int idade`: Idade do paciente.<br>`const char *data_cadastro`: Data de cadastro. | void                                                                    |
+| `atualizar_paciente`       | Atualiza os dados de um paciente existente no banco de dados.                                   | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`int id`: ID do paciente a ser atualizado.<br>`const char *cpf`: Novo CPF (opcional).<br>`const char *nome`: Novo nome (opcional).<br>`int idade`: Nova idade.<br>`const char *data_cadastro`: Nova data de cadastro (opcional). | void                                                                    |
+| `remover_paciente`         | Remove um paciente do banco de dados.                                                           | `BDPaciente *bd`: Ponteiro para o banco de dados.<br>`int id`: ID do paciente a ser removido.          | void                                                                    |
+| `imprimir_pacientes`       | Imprime todos os pacientes cadastrados no banco de dados.                                       | `BDPaciente *bd`: Ponteiro para o banco de dados.                                                      | void                                                                    |
+|                            | - Verifica se a lista está vazia.<br>- Formata e imprime os dados dos pacientes em uma tabela.  |                                                                                                        |                                                                         |
 
 
 
